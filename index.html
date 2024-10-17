@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solicitud de Herramienta</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 50px;
+        }
+        form {
+            width: 300px;
+            margin: auto;
+        }
+        label {
+            margin-top: 10px;
+            display: block;
+        }
+        input, select {
+            width: 100%;
+            padding: 8px;
+            margin-top: 5px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Solicitud de Herramienta</h1>
+
+    <form id="toolRequestForm" action="https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec" method="POST">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="matricula">Matrícula</label>
+        <input type="text" id="matricula" name="matricula" required>
+
+        <label for="tool">Herramienta</label>
+        <select id="tool" name="tool" required>
+            <option value="Martillo">Martillo</option>
+            <option value="Cinta Métrica">Cinta Métrica</option>
+            <option value="Desarmador">Desarmador</option>
+        </select>
+
+        <button type="submit">Solicitar</button>
+    </form>
+
+</body>
+</html>
